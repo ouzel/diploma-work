@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="40dp"
+    android:background="@drawable/background1">
+
+    <!-- Переключатель "Рядом" -->
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switch_filter_nearby"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Только локальные новости"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:layout_margin="16dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:thumbTint="@color/primary_variant"
+        android:trackTint="@color/secondary_variant"/>
+
+    <!-- RecyclerView для отображения постов -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_posts"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/switch_filter_nearby"
+        android:layout_above="@id/bottom_buttons_container"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp"
+        android:scrollbars="vertical"
+        android:padding="8dp" />
+
+    <!-- Нижняя панель с кнопками -->
+    <LinearLayout
+        android:id="@+id/bottom_buttons_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@android:color/white"
+        android:padding="12dp"
+        android:elevation="4dp"
+        android:gravity="center"
+        android:weightSum="2">
+
+        <!-- Кнопка добавления поста -->
+        <ImageButton
+            android:id="@+id/btn_add_post"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_baseline_add_24"
+            android:contentDescription="Добавить пост"
+            android:padding="12dp"/>
+
+        <!-- Кнопка "Избранное" (фильтр сохраненных постов) -->
+        <CheckBox
+            android:id="@+id/filter_favorites"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/filter_button"
+            android:button="@null"
+            android:padding="12dp"
+            android:text="Избранное"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:gravity="center"/>
+    </LinearLayout>
+</RelativeLayout>

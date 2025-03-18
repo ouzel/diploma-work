@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/background4">
+
+    <!-- Название пункта -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/background_color"
+        android:paddingBottom="8dp" />
+
+    <!-- Описание -->
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@color/background_color"
+        android:paddingBottom="8dp" />
+
+    <!-- Адрес -->
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@color/background_color"
+        android:paddingBottom="8dp" />
+
+    <!-- Типы перерабатываемого мусора -->
+    <TextView
+        android:id="@+id/waste_types"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@color/background_color"
+        android:paddingBottom="8dp" />
+
+    <!-- График -->
+    <TextView
+        android:id="@+id/schedule"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@color/background_color"
+        android:paddingBottom="8dp" />
+
+    <Button
+        android:id="@+id/add_location_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Сохранить локацию"
+        android:padding="12dp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:paddingBottom="24dp"/>
+
+
+</LinearLayout>

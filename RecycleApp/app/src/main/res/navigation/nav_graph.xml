@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/nav_scan">
+
+    <!-- Новости -->
+    <fragment
+        android:id="@+id/nav_news"
+        android:name="com.example.recycleapp.ui.fragments.NewsFragment"
+        android:label="Новости"
+        tools:layout="@layout/fragment_news" />
+
+    <!-- Карта -->
+    <fragment
+        android:id="@+id/nav_map"
+        android:name="com.example.recycleapp.ui.fragments.MapFragment"
+        android:label="Карта"
+        tools:layout="@layout/fragment_map" />
+
+    <!-- Сканирование -->
+    <fragment
+        android:id="@+id/nav_scan"
+        android:name="com.example.recycleapp.ui.fragments.ScanFragment"
+        android:label="Сканирование"
+        tools:layout="@layout/fragment_scan">
+        <argument
+            android:name="scan_message"
+            app:argType="string"
+            android:defaultValue="Сканирование не выполнено" />
+    </fragment>
+
+    <!-- Аналитика -->
+    <fragment
+        android:id="@+id/nav_analytics"
+        android:name="com.example.recycleapp.ui.fragments.AnalyticsFragment"
+        android:label="Аналитика"
+        tools:layout="@layout/fragment_analytics" />
+</navigation>

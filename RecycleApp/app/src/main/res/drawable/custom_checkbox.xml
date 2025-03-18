@@ -1,0 +1,48 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Состояние выбранного чекбокса -->
+    <item android:state_checked="true">
+        <layer-list>
+            <!-- Фон -->
+            <item>
+                <shape android:shape="rectangle">
+                    <gradient
+                        android:startColor="#FF8A65"
+                        android:endColor="#FF7043"
+                        android:angle="90" />
+                    <corners android:radius="12dp" />
+                    <stroke android:width="2dp" android:color="#D84315" />
+                </shape>
+            </item>
+            <!-- Кружок внутри -->
+            <item android:width="18dp" android:height="18dp" android:gravity="center">
+                <shape android:shape="oval">
+                    <solid android:color="#FFFFFF" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+
+    <!-- Состояние невыбранного чекбокса -->
+    <item>
+        <layer-list>
+            <!-- Фон -->
+            <item>
+                <shape android:shape="rectangle">
+                    <gradient
+                        android:startColor="#CFD8DC"
+                        android:endColor="#ECEFF1"
+                        android:angle="90" />
+                    <corners android:radius="12dp" />
+                    <stroke android:width="2dp" android:color="#90A4AE" />
+                </shape>
+            </item>
+            <!-- Пустой кружок -->
+            <item android:width="18dp" android:height="18dp" android:gravity="center">
+                <shape android:shape="oval">
+                    <solid android:color="#FFFFFF" />
+                    <stroke android:width="2dp" android:color="#B0BEC5" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>

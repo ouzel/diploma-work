@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background4"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:elevation="4dp">
+
+        <!-- Заголовок поста -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Создать новый пост"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:paddingBottom="16dp"
+            android:textColor="@color/white" />
+
+        <!-- Поле для ввода заголовка -->
+        <EditText
+            android:id="@+id/et_post_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Введите название публикации"
+            android:background="@drawable/bg_input"
+            android:padding="12dp"
+            android:textSize="16sp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Поле для ввода текста -->
+        <EditText
+            android:id="@+id/et_post_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Введите текст публикации"
+            android:inputType="textMultiLine"
+            android:background="@drawable/bg_input"
+            android:padding="12dp"
+            android:minLines="6"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp" />
+
+        <CheckBox
+            android:id="@+id/checkbox_add_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Вставить метку геолокации"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Кнопка публикации -->
+        <Button
+            android:id="@+id/btn_publish_post"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Опубликовать"
+            android:textColor="#fff"
+            android:padding="12dp"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Кнопка отмены -->
+        <Button
+            android:id="@+id/btn_cancel_post"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Отмена"
+            android:textColor="#fff"
+            android:padding="12dp"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+</ScrollView>

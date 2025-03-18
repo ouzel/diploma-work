@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="52dp"
+    android:background="@drawable/background1">
+
+    <!-- Фильтры (Чекбоксы) -->
+    <LinearLayout
+        android:id="@+id/filter_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="16dp"
+        android:padding="8dp"
+        android:gravity="center"
+        android:weightSum="4">
+
+        <CheckBox
+            android:id="@+id/filter_paper"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/filter_button"
+            android:button="@null"
+            android:padding="12dp"
+            android:text="Бумага"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            android:gravity="center"/>
+
+        <CheckBox
+            android:id="@+id/filter_plastic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/filter_button"
+            android:button="@null"
+            android:padding="12dp"
+            android:text="Пластик"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            android:gravity="center"/>
+
+        <CheckBox
+            android:id="@+id/filter_glass"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/filter_button"
+            android:button="@null"
+            android:padding="12dp"
+            android:text="Стекло"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            android:gravity="center"/>
+
+        <CheckBox
+            android:id="@+id/filter_metal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/filter_button"
+            android:button="@null"
+            android:padding="12dp"
+            android:text="Металл"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <!-- Карта в CardView (для границы и отступов) -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/map_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/filter_section"
+        android:layout_margin="16dp"
+        android:padding="20dp"
+        android:background="@color/white"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="@color/background_color">
+
+        <!-- Карта -->
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_margin="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Круглые кнопки поверх карты -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="400dp"
+        android:elevation="10dp">
+
+        <!-- Кнопка увеличения -->
+        <ImageButton
+            android:id="@+id/btn_zoom_in"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/circle_button_background"
+            android:src="@drawable/ic_baseline_add_24_map"
+            android:contentDescription="Увеличить"
+            android:padding="10dp"/>
+
+        <!-- Кнопка уменьшения -->
+        <ImageButton
+            android:id="@+id/btn_zoom_out"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/circle_button_background"
+            android:src="@drawable/ic_baseline_remove_24_map"
+            android:contentDescription="Уменьшить"
+            android:padding="10dp"/>
+
+        <!-- Кнопка избранного -->
+        <ImageButton
+            android:id="@+id/btn_toggle_favorites"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/circle_button_background"
+            android:src="@drawable/ic_baseline_saved_search_24_map"
+            android:contentDescription="Избранное"
+            android:padding="10dp"/>
+    </LinearLayout>
+
+</RelativeLayout>
+
+
+

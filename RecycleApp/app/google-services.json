@@ -1,0 +1,38 @@
+{
+  "project_info": {
+    "project_number": "566609640306",
+    "project_id": "diploma-1-0",
+    "storage_bucket": "diploma-1-0.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:566609640306:android:abc74ddc16441ebf6d3beb",
+        "android_client_info": {
+          "package_name": "com.example.recycleapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "566609640306-8gj4mace2sokpbvd8a4dkvf6qsgm96hk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.recycleapp",
+            "certificate_hash": "6878e40f5d245d33bb4c175f87ab122165605fd7"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqKSStHWkb9YgKNjYMwvAVTWuaXYMWu2k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

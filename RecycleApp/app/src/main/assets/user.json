@@ -1,0 +1,20 @@
+{
+  "loginDates": [
+    "29.01.2025",
+    "30.01.2025",
+    "01.02.2025"
+  ],
+  "scanningInfo": [
+    {
+      "date": "29.01.2025",
+      "result": "PET-1",
+      "description": "PET plastic, recyclable"
+    },
+    {
+      "date": "20.02.2025",
+      "result": "PAP-21",
+      "description": "Corrugated cardboard, recyclable"
+    }
+  ],
+  "points": 10
+}

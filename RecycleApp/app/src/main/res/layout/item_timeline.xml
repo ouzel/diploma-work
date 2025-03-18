@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="8dp">
+
+    <!-- Timeline Icon -->
+    <ImageView
+        android:id="@+id/timelineIcon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/like_up" />
+
+    <!-- Date Container -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_centerVertical="true"
+        android:gravity="center">
+
+        <!-- Date Text -->
+        <TextView
+            android:id="@+id/textDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jun 3"
+            android:textColor="@color/primary_variant"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Card for Item Info -->
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="170dp"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:background="@drawable/timeline_card_background"
+        android:padding="10dp"
+        android:elevation="4dp"
+        android:gravity="center"
+        android:backgroundTint="#2E7D32">
+
+        <!-- Item Name -->
+        <TextView
+            android:id="@+id/textItemName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Coffee Bags"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <!-- Item Description -->
+        <TextView
+            android:id="@+id/textItemDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1.5 lb"
+            android:textColor="#B0BEC5"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <!-- Timeline Line -->
+    <View
+        android:id="@+id/timelineLine"
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="42dp"
+        android:background="@color/primary_variant"
+        android:translationZ="10dp"/>
+</RelativeLayout>
+

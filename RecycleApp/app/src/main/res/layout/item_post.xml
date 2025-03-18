@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:background="#f4ffdf"
+    android:elevation="2dp"
+    android:layout_marginBottom="8dp">
+
+    <!-- Заголовок поста -->
+    <TextView
+        android:id="@+id/tv_post_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Заголовок поста"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:paddingBottom="4dp" />
+
+    <!-- Автор поста -->
+    <TextView
+        android:id="@+id/tv_post_author"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Автор поста"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        android:textColor="#757575"
+        android:paddingBottom="4dp" />
+
+    <!-- Время публикации поста -->
+    <TextView
+        android:id="@+id/tv_post_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Опубликовано: 01.01.2025 10:00"
+        android:textSize="12sp"
+        android:textColor="@android:color/darker_gray"
+        android:paddingBottom="8dp" />
+
+    <!-- Текст поста -->
+    <TextView
+        android:id="@+id/tv_post_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Текст поста"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:paddingBottom="8dp" />
+
+    <!-- GPS-метка -->
+    <TextView
+        android:id="@+id/tv_gps_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GPS: 55.7558, 37.6173"
+        android:textSize="12sp"
+        android:textColor="@android:color/darker_gray"
+        android:drawableStart="@drawable/ic_baseline_location_on_24"
+        android:drawablePadding="4dp"
+        android:visibility="gone" />
+
+    <!-- Панель действий: лайки и комментарии -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:paddingTop="8dp">
+
+        <!-- Кнопка лайка -->
+        <ImageButton
+            android:id="@+id/btn_like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackgroundBorderless"
+            android:src="@drawable/like_down"
+            android:contentDescription="Лайк"
+            android:layout_marginEnd="16dp" />
+
+        <!-- Кнопка комментария -->
+        <ImageButton
+            android:id="@+id/btn_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_baseline_mode_comment_24"
+            android:contentDescription="Комментарий"
+            android:visibility="gone"/>
+    </LinearLayout>
+</LinearLayout>
