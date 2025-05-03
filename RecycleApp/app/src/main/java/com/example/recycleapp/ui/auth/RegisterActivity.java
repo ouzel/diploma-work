@@ -26,6 +26,7 @@ public class RegisterActivity extends AppCompatActivity {
         if (FirebaseApp.getApps(this).isEmpty()) {
             FirebaseApp.initializeApp(this);
         }
+        setContentView(R.layout.activity_register);
         scheduleNotifications();
 
         // Инициализация FirebaseAuth
@@ -42,6 +43,23 @@ public class RegisterActivity extends AppCompatActivity {
             // Проверка на пустые поля
             if (email.isEmpty() || password.isEmpty()) {
                 Toast.makeText(this, "Заполните все поля", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            // Проверка формата email
+            String emailPattern = "^[\\w.-]+@[\\w.-]+\\.[a-zA-Z]{2,}$";
+            if (!email.matches(emailPattern)) {
+                Toast.makeText(this, "Некорректный формат email", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            // Проверка пароля: не менее 6 символов, хотя бы одна заглавная буква и одна цифра
+            if (password.length() < 6 ||
+                    !password.matches(".*[A-ZА-Я].*") ||
+                    !password.matches(".*\\d.*")) {
+                Toast.makeText(this,
+                        "Пароль должен содержать не менее 6 символов, одну заглавную букву и одну цифру",
+                        Toast.LENGTH_LONG).show();
                 return;
             }
 

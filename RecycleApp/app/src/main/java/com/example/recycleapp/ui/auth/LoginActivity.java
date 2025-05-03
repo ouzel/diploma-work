@@ -43,10 +43,6 @@ public class LoginActivity extends AppCompatActivity {
         EditText passwordField = findViewById(R.id.passwordField);
         Button loginButton = findViewById(R.id.loginButton);
 
-        // Test data for quick login
-        emailField.setText("sadrozd@edu.hse.ru");
-        passwordField.setText("123456");
-
         // Observe login result
         loginViewModel.getLoginResult().observe(this, isSuccess -> {
             if (isSuccess) {

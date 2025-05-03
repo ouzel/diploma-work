@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
 
         Button loginButton = findViewById(R.id.loginButton);
 
-        Button registerButton = findViewById(R.id.registerButton);
+        Button registerButton = findViewById(R.id.openRegisterButton);
         if (registerButton == null) {
             Log.e("DEBUG", "Button openRegisterButton not found");
         } else {
